@@ -269,6 +269,29 @@ f["7"].MouseButton1Click:Connect(function()
 	end
 end)
 
+makebutton(f, "launch dex", "8")
+
+f["8"].MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://obj.wearedevs.net/2/scripts/Dex%20Explorer.lua"))()
+end)
+
+
+makebutton(f, "super spin", "9")
+
+f["9"].MouseButton1Click:Connect(function()
+	while true do
+   		local character = game.Players.LocalPlayer.Character
+   		character:PivotTo(character:GetPivot() * CFrame.Angles(0, math.rad(9000000000000000000000000000000000000000), 0)) 
+   		task.wait()
+	end
+end)
+
+makebutton(f, "reset", "10")
+
+f["10"].MouseButton1Click:Connect(function()
+	pplayer:LoadCharacterAsync()
+end)
+
 --== EVERYTHING SHOULD BE ABOVE THIS ==--
 maketext(f, "Player Teleports", 20, "98")
 local g = Instance.new("Frame")
