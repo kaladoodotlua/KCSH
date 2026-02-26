@@ -4,9 +4,12 @@ local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
 local players = game:GetService("Players")
 
-if pplayer.PlayerGui:FindFirstChild("KCSH") then
-	pplayer.PlayerGui:FindFirstChild("KCSH"):Destroy()
-end
+-- pcall because it keeps fucking breaking and i dont know why
+pcall(function()
+	if pplayer.PlayerGui:FindFirstChild("KCSH") then
+		pplayer.PlayerGui:FindFirstChild("KCSH"):Destroy()
+	end
+end)
 
 local a = Instance.new("ScreenGui")
 a.ResetOnSpawn = true
