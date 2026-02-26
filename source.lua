@@ -4,7 +4,7 @@ local hmsg = Instance.new("Hint")
 hmsg.Parent = workspace
 hmsg.Text = "FLY HAS A 90% CHANCE OF GETTING YOU BANNED!!"
 task.wait(5)
-hmsg:Destroy
+hmsg:Destroy()
  
 local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
