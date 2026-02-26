@@ -4,10 +4,15 @@ local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
 local players = game:GetService("Players")
 
+if pplayer.PlayerGui:FindFirstChild("KCSH") or pplayer.PlayerGui:FindFirstChild("KSCH") then
+	pplayer.PlayerGui:FindFirstChild("KCSH"):Destroy()
+	pplayer.PlayerGui:FindFirstChild("KSCH"):Destroy()
+end
+
 local a = Instance.new("ScreenGui")
 a.ResetOnSpawn = true
 a.Parent = pplayer.PlayerGui
-a.Name = "KSCH"
+a.Name = "KCSH"
 
 task.wait(1)
 local function maketext(parent, text, size, name)
