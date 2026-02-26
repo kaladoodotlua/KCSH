@@ -1,11 +1,13 @@
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaladoo2/KCSH/refs/heads/main/source.lua"))()
 
-local hmsg = Instance.new("Hint")
-hmsg.Parent = workspace
-hmsg.Text = "FLY HAS A 90% CHANCE OF GETTING YOU BANNED!!"
-task.wait(5)
-hmsg:Destroy()
- 
+pcall(function()
+	local hmsg = Instance.new("Hint")
+	hmsg.Parent = workspace
+	hmsg.Text = "FLY HAS A 90% CHANCE OF GETTING YOU BANNED!!"
+	task.wait(5)
+	hmsg:Destroy()
+end)
+
 local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
 local players = game:GetService("Players")
