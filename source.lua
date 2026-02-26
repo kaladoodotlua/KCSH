@@ -207,18 +207,50 @@ f["4"].MouseButton1Click:Connect(function()
 	end)
 end)
 
-makebutton(f, "walk <font color='#a63131'><b>off</b></font>", "5")
+makebutton(f, "slow walk <font color='#a63131'><b>off</b></font>", "5")
 local walking = false
 
 f["5"].MouseButton1Click:Connect(function()
+	local cws = wplayer.Humanoid.WalkSpeed
 	if not walking then
 		walking = true
-		f["5"].Text = "walk <font color='#39a637'><b>on</b></font>"
+		f["5"].Text = "slow walk <font color='#39a637'><b>on</b></font>"
 		wplayer.Humanoid.WalkSpeed = 6
 	else
 		walking = false
-		f["5"].Text = "walk <font color='#a63131'><b>off</b></font>"
-		wplayer.Humanoid.WalkSpeed = 16
+		f["5"].Text = "slow walk <font color='#a63131'><b>off</b></font>"
+		wplayer.Humanoid.WalkSpeed = cws
+	end
+end)
+
+makebutton(f, "sprint <font color='#a63131'><b>off</b></font>", "6")
+local walking = false
+
+f["6"].MouseButton1Click:Connect(function()
+	local cws = wplayer.Humanoid.WalkSpeed
+	if not sprinting then
+		sprinting = true
+		f["6"].Text = "sprint <font color='#39a637'><b>on</b></font>"
+		wplayer.Humanoid.WalkSpeed = 30
+	else
+		sprinting = false
+		f["6"].Text = "sprint <font color='#a63131'><b>off</b></font>"
+		wplayer.Humanoid.WalkSpeed = cws
+	end
+end)
+
+makebutton(f, "high jump <font color='#a63131'><b>off</b></font>", "7")
+local walking = false
+
+f["7"].MouseButton1Click:Connect(function()
+	if not jumping then
+		jumping = true
+		f["7"].Text = "high jump <font color='#39a637'><b>on</b></font>"
+		wplayer.Humanoid.JumpPower = 200
+	else
+		jumping = false
+		f["7"].Text = "high jump <font color='#a63131'><b>off</b></font>"
+		wplayer.Humanoid.JumpPower = 50
 	end
 end)
 
