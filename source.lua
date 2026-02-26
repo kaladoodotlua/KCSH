@@ -1,6 +1,6 @@
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaladoo2/KCSH/refs/heads/main/source.lua"))()
 
-local hmsg = Instance.new("Message")
+local hmsg = Instance.new("Hint")
 hmsg.Parent = workspace
 hmsg.Text = "FLY HAS A 90% CHANCE OF GETTING YOU BANNED!!"
 task.wait(5)
