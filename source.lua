@@ -131,7 +131,7 @@ f["3"].MouseButton1Click:Connect(function()
 	end
 end)
 
-makebutton(f, "fly <font color='#a63131'><b>off</b></font>", "4")
+makebutton(f, "fly (90% ban chance) <font color='#a63131'><b>off</b></font>", "4")
 local humanoidRootPart = wplayer.HumanoidRootPart
 local mouse = pplayer:GetMouse()
 local flying = false
@@ -211,7 +211,6 @@ makebutton(f, "slow walk <font color='#a63131'><b>off</b></font>", "5")
 local walking = false
 
 f["5"].MouseButton1Click:Connect(function()
-	local cws = wplayer.Humanoid.WalkSpeed
 	if not walking then
 		walking = true
 		f["5"].Text = "slow walk <font color='#39a637'><b>on</b></font>"
@@ -219,7 +218,7 @@ f["5"].MouseButton1Click:Connect(function()
 	else
 		walking = false
 		f["5"].Text = "slow walk <font color='#a63131'><b>off</b></font>"
-		wplayer.Humanoid.WalkSpeed = cws
+		wplayer.Humanoid.WalkSpeed = 16
 	end
 end)
 
@@ -227,15 +226,14 @@ makebutton(f, "sprint <font color='#a63131'><b>off</b></font>", "6")
 local walking = false
 
 f["6"].MouseButton1Click:Connect(function()
-	local cws = wplayer.Humanoid.WalkSpeed
 	if not sprinting then
 		sprinting = true
 		f["6"].Text = "sprint <font color='#39a637'><b>on</b></font>"
-		wplayer.Humanoid.WalkSpeed = 30
+		wplayer.Humanoid.WalkSpeed = 100
 	else
 		sprinting = false
 		f["6"].Text = "sprint <font color='#a63131'><b>off</b></font>"
-		wplayer.Humanoid.WalkSpeed = cws
+		wplayer.Humanoid.WalkSpeed = 16
 	end
 end)
 
