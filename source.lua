@@ -289,7 +289,11 @@ end)
 makebutton(f, "reset", "10")
 
 f["10"].MouseButton1Click:Connect(function()
-	pplayer:LoadCharacterAsync()
+	local oldp = wplayer.HumanoidRootPart.CFrame
+	task.wait(0.1)
+	wplayer.Humanoid.Health = 0
+	task.wait(pplayer.Parent.RespawnTime + 0.2)
+	wplayer.HumanoidRootPart.CFrame = oldp.CFrame
 end)
 
 --== EVERYTHING SHOULD BE ABOVE THIS ==--
