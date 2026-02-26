@@ -269,10 +269,10 @@ f["7"].MouseButton1Click:Connect(function()
 	end
 end)
 
-makebutton(f, "launch dex", "8")
+makebutton(f, "launch iy", "8")
 
 f["8"].MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://gist.githubusercontent.com/dannythehacker/1781582ab545302f2b34afc4ec53e811/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
 
 
