@@ -4,11 +4,9 @@ local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
 local players = game:GetService("Players")
 
--- because i cant fucking spell it has to have this twice :-)
-local gui1 = pplayer.PlayerGui:FindFirstChild("KCSH")
-local gui2 = pplayer.PlayerGui:FindFirstChild("KSCH")
-if gui1 then gui1:Destroy() end
-if gui2 then gui2:Destroy() end
+if pplayer.PlayerGui:FindFirstChild("KCSH") then
+	pplayer.PlayerGui:FindFirstChild("KCSH"):Destroy()
+end
 
 local a = Instance.new("ScreenGui")
 a.ResetOnSpawn = true
