@@ -1,4 +1,10 @@
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaladoo2/KCSH/refs/heads/main/source.lua"))()
+
+local hmsg = Instance.new("Message")
+hmsg.Parent = workspace
+hmsg.Text = "FLY HAS A 90% CHANCE OF GETTING YOU BANNED!!"
+task.wait(5)
+hmsg:Destroy
  
 local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
@@ -138,7 +144,7 @@ f["3"].MouseButton1Click:Connect(function()
 	end
 end)
 
-makebutton(f, "fly (90% ban chance) <font color='#a63131'><b>off</b></font>", "4")
+makebutton(f, "fly <font color='#a63131'><b>off</b></font>", "4")
 local humanoidRootPart = wplayer.HumanoidRootPart
 local mouse = pplayer:GetMouse()
 local flying = false
