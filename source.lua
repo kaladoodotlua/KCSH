@@ -23,7 +23,6 @@ end)
 local a = Instance.new("ScreenGui")
 a.ResetOnSpawn = true
 a.Parent = game.CoreGui
-print("loc: " .. a.Parent.Name)
 a.Name = "KCSH"
 
 task.wait(1)
