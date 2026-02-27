@@ -256,7 +256,7 @@ f["6"].MouseButton1Click:Connect(function()
 end)
 
 makebutton(f, "high jump <font color='#a63131'><b>off</b></font>", "7")
-local walking = false
+local jumping = false
 
 f["7"].MouseButton1Click:Connect(function()
 	if not jumping then
