@@ -241,7 +241,7 @@ f["5"].MouseButton1Click:Connect(function()
 end)
 
 makebutton(f, "sprint <font color='#a63131'><b>off</b></font>", "6")
-local walking = false
+local sprinting = false
 
 f["6"].MouseButton1Click:Connect(function()
 	if not sprinting then
