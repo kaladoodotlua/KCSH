@@ -13,10 +13,17 @@ local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
 local players = game:GetService("Players")
 
+-- pcall because it keeps fucking breaking and i dont know why
+pcall(function()
+	if game:GetService("CoreGui"):FindFirstChild("KCSH") then
+		game:GetService("CoreGui"):FindFirstChild("KCSH"):Destroy()
+	end
+end)
+
 local a = Instance.new("ScreenGui")
 a.ResetOnSpawn = true
 a.Parent = game:GetService("CoreGui")
-print("loc: " .. a.Parent)
+print("loc: " .. a.Parent.Name)
 a.Name = "KCSH"
 
 task.wait(1)
