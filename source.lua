@@ -9,6 +9,7 @@ pcall(function()
 	hmsg:Destroy()
 end)
 ]]
+task.wait(0.5)
 local pplayer = game.Players.LocalPlayer
 local wplayer = workspace:WaitForChild(pplayer.Name)
 local players = game:GetService("Players")
