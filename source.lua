@@ -23,7 +23,7 @@ end)
 
 local a = Instance.new("ScreenGui")
 a.ResetOnSpawn = true
-a.Parent = pplayer.PlayerGui
+a.Parent = game:GetService("CoreGui")
 a.Name = "KCSH"
 
 task.wait(1)
