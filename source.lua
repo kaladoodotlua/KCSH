@@ -16,8 +16,8 @@ local players = game:GetService("Players")
 
 -- pcall because it keeps fucking breaking and i dont know why
 pcall(function()
-	if pplayer.PlayerGui:FindFirstChild("KCSH") then
-		pplayer.PlayerGui:FindFirstChild("KCSH"):Destroy()
+	if game:GetService("CoreGui"):FindFirstChild("KCSH") then
+		game:GetService("CoreGui"):FindFirstChild("KCSH"):Destroy()
 	end
 end)
 
