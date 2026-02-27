@@ -23,6 +23,7 @@ end)
 local a = Instance.new("ScreenGui")
 a.ResetOnSpawn = true
 a.Parent = game.CoreGui
+a.DisplayOrder = 2147483647
 a.Name = "KCSH"
 
 task.wait(1)
