@@ -296,6 +296,54 @@ f["10"].MouseButton1Click:Connect(function()
 	wplayer.HumanoidRootPart.CFrame = oldp.CFrame
 end)
 
+makebutton(f, "jorkin", "11")
+
+f["11"].MouseButton1Click:Connect(function()
+	if not wplayer.Humanoid or not pplayer.Backpack then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = "jorkin de peanits"
+	tool.ToolTip = "in the stripped club. straight up \"jorking it\" . and by \"it\" , haha, well. let's justr say. My peanits."
+	tool.RequiresHandle = false
+	tool.Parent = pplayer.Backpack
+
+	local jorkin = false
+	local track = nil
+
+	local function stopTomfoolery()
+		jorkin = false
+		if track then
+			track:Stop()
+			track = nil
+		end
+	end
+
+	tool.Equipped:Connect(function() jorkin = true end)
+	tool.Unequipped:Connect(stopTomfoolery)
+	wplayer.Humanoid.Died:Connect(stopTomfoolery)
+
+	while task.wait() do
+		if not jorkin then continue end
+
+		local isR15 = (if wplayer.Humanoid.RigType == Enum.HumanoidRigType.R15 then return true end)
+		if not track then
+			local anim = Instance.new("Animation")
+			anim.AnimationId = not isR15 and "rbxassetid://72042024" or "rbxassetid://698251653"
+			track = wplayer.Humanoid:LoadAnimation(anim)
+		end
+
+		track:Play()
+		track:AdjustSpeed(isR15 and 0.7 or 0.65)
+		track.TimePosition = 0.6
+		task.wait(0.1)
+		while track and track.TimePosition < (not isR15 and 0.65 or 0.7) do task.wait(0.1) end
+		if track then
+			track:Stop()
+			track = nil
+		end
+	end
+end)
+
 --== EVERYTHING SHOULD BE ABOVE THIS ==--
 maketext(f, "Player Teleports", 20, "98")
 local g = Instance.new("Frame")
