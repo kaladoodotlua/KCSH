@@ -288,7 +288,7 @@ end)
 
 makebutton(f, "reset", "10")
 
-f["10"].MouseButton1Click:Connect(function()
+f["9"].MouseButton1Click:Connect(function()
 	local oldp = wplayer.HumanoidRootPart.CFrame
 	task.wait(0.1)
 	wplayer.Humanoid.Health = 0
@@ -298,7 +298,7 @@ end)
 
 makebutton(f, "jorkin", "11")
 
-f["11"].MouseButton1Click:Connect(function()
+f["9"].MouseButton1Click:Connect(function()
 	if not wplayer.Humanoid or not pplayer.Backpack then return end
 
 	local tool = Instance.new("Tool")
